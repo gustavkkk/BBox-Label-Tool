@@ -7,6 +7,7 @@
 #
 #-------------------------------------------------------------------------------
 from __future__ import division
+
 try:
     from Tkinter import *
 except:
@@ -16,7 +17,13 @@ try:
     import tkMessageBox
 except:
     from tkinter import messagebox
-from PIL import Image, ImageTk
+
+try:
+    import Image
+except ImportError:
+    from PIL import Image
+    
+from PIL import ImageTk
 import os
 import glob
 import random
